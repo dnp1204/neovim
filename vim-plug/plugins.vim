@@ -10,10 +10,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'sheerun/vim-polyglot'
+    Plug 'airblade/vim-rooter'
     Plug 'neomake/neomake'
+    
+    Plug 'scrooloose/nerdcommenter'
+    
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'airblade/vim-rooter'
 
     Plug 'joshdick/onedark.vim'
     Plug 'vim-airline/vim-airline'
