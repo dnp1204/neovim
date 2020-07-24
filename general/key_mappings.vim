@@ -16,6 +16,9 @@ nnoremap <C-Q> :q<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 
+" Unload buffer
+nnoremap <leader>w :bd<CR>
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
