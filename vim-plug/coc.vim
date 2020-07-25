@@ -7,7 +7,6 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-python',
     \ 'coc-markdownlint',
-    \ 'coc-markdownlint',
     \ 'coc-omnisharp',
     \ 'coc-snippets',
     \ 'coc-sql',
