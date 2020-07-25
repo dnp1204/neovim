@@ -105,7 +105,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # Plug - neovim plugin manager
-autoload/plugged/*
+autoload/plugged
 
 # Startify
 session
