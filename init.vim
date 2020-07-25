@@ -10,3 +10,4 @@ source $HOME/.config/nvim/vim-plug/fzf.vim
 source $HOME/.config/nvim/vim-plug/neomake.vim
 source $HOME/.config/nvim/vim-plug/nerd-commenter.vim
 source $HOME/.config/nvim/vim-plug/vim-startify.vim
+source $HOME/.config/nvim/vim-plug/nerdtree.vim

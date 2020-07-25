@@ -16,6 +16,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'mhinz/vim-startify'
 
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'scrooloose/nerdcommenter'
     
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
