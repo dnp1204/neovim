@@ -9,6 +9,10 @@ nnoremap b] :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap b[ :bprevious<CR>
 
+" Avoid the escape key
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
