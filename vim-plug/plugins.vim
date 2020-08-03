@@ -12,7 +12,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'scrooloose/syntastic'
 
-    Plug 'airblade/vim-rooter'
+    " Plug 'airblade/vim-rooter'
     Plug 'tpope/vim-fugitive'
     Plug 'mhinz/vim-startify'
 
