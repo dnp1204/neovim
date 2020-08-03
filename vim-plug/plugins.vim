@@ -13,8 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/syntastic'
 
     " Plug 'airblade/vim-rooter'
+    " Plug 'mhinz/vim-startify'
     Plug 'tpope/vim-fugitive'
-    Plug 'mhinz/vim-startify'
 
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'Xuyuanp/nerdtree-git-plugin'
