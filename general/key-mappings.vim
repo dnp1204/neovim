@@ -4,10 +4,11 @@ nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" TAB in general mode will move to text buffer
+" Move between buffers
 nnoremap b] :bnext<CR>
-" SHIFT-TAB will go back
 nnoremap b[ :bprevious<CR>
+nnoremap B[ :bfirst<CR>
+nnoremap B] :blast<CR>
 
 " Avoid the escape key
 inoremap jk <Esc>

@@ -1,15 +1,25 @@
+" Disable preview window for autocompletion
+set completeopt-=preview
+
+" Maximum number of entries in autocomplete popup
+set pumheight=15
+
 let g:coc_global_extensions = [
     \ 'coc-actions',
     \ 'coc-bookmark',
     \ 'coc-css',
     \ 'coc-emmet',
+    \ 'coc-highlight',
     \ 'coc-html',
     \ 'coc-json',
+    \ 'coc-prettier',
     \ 'coc-python',
     \ 'coc-markdownlint',
     \ 'coc-omnisharp',
     \ 'coc-snippets',
+    \ 'coc-spell-checker',
     \ 'coc-sql',
+    \ 'coc-svg',
     \ 'coc-tsserver',
     \ 'coc-xml',
     \ 'coc-yaml',
@@ -77,3 +87,22 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+" stuff to ignore when tab completing
+set wildoptions=pum
+set wildignore=*.o,*.obj,*~
+set wildignore+=*.git*
+set wildignore+=*.meteor*
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*mypy_cache*
+set wildignore+=*__pycache__*
+set wildignore+=*cache*
+set wildignore+=*logs*
+set wildignore+=*node_modules*
+set wildignore+=**/node_modules/**
+set wildignore+=*DS_Store*
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif

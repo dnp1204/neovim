@@ -11,5 +11,8 @@
   ],
 
   "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true
+  "python.linting.pylintEnabled": true,
+  "cSpell.allowCompoundWords": true,
+  "prettier.singleQuote": false,
+  "cSpell.diagnosticLevel": "Hint"
 }
