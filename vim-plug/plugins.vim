@@ -10,9 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'sheerun/vim-polyglot'
-    Plug 'scrooloose/syntastic'
+    Plug 'w0rp/ale'
 
-    " Plug 'airblade/vim-rooter'
     " Plug 'mhinz/vim-startify'
     Plug 'tpope/vim-fugitive'
 
