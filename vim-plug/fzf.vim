@@ -12,7 +12,6 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 map <C-p> :Files<CR>
 map <C-f> :BLines<CR>
-map <leader>p :Ag<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
@@ -44,11 +43,10 @@ let g:fzf_colors =
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--inline-info']}), <bang>0)
 
-
 " Get text in files with Rg
-" command! -bang -nargs=* Rg
-"   \ call fzf#vim#grep(
-"   \   "rg --column --line-number --no-heading --color=always --smart-case --glob '!.git/**' ".shellescape(<q-args>), 1,
+command! -bang -nargs=* Rg
+   \ call fzf#vim#grep(
+   \   "rg --column --line-number --no-heading --color=always --smart-case --glob '!.git/**' ".shellescape(<q-args>), 1,
 
  " Make Ripgrep ONLY search file contents and not filenames
 command! -bang -nargs=* Rg
