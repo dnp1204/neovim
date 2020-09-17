@@ -64,7 +64,7 @@ Make sure to add these paths somewhere in your config:
 
 | Shortcut | Action           |
 | -------- | ---------------- |
-| `Ctrl-s` | Equivalent to :s |
+| `Ctrl-s` | Equivalent to :w |
 | `Ctrl-q` | Equivalent to :q |
 | `Ctrl-n` | Toggle NERD Tree |
 
