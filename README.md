@@ -15,6 +15,12 @@
 
     npm i -g neovim
 
+## Install vim-plug for Neovim
+
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+Then open nvim and run `:PlugInstall` to install all plugins
+
 ## (Optional) Install python & node support using virtual environments
 
 Make sure to add these paths somewhere in your config:
