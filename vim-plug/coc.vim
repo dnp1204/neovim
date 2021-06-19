@@ -6,7 +6,6 @@ set pumheight=15
 
 let g:coc_global_extensions = [
     \ 'coc-actions',
-    \ 'coc-bookmark',
     \ 'coc-css',
     \ 'coc-emmet',
     \ 'coc-highlight',
