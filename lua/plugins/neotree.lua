@@ -118,7 +118,26 @@ return {
 			-- A list of functions, each representing a global custom command
 			-- that will be available in all sources (if not overridden in `opts[source_name].commands`)
 			-- see `:h neo-tree-custom-commands-global`
-			commands = {},
+			commands = {
+				open_with_system = function(state)
+					local node = state.tree:get_node()
+					local path = node:get_id()
+					local cmd
+					if vim.fn.has('mac') == 1 then
+						cmd = 'open'
+					elseif vim.fn.has('unix') == 1 then
+						cmd = 'xdg-open'
+					elseif vim.fn.has('win32') == 1 then
+						cmd = 'start'
+					end
+					if cmd then
+						vim.fn.system(string.format('%s "%s"', cmd, path))
+						print('Opened: ' .. path)
+					else
+						print('OS not supported')
+					end
+				end,
+			},
 			window = {
 				position = "left",
 				width = 40,
@@ -136,6 +155,7 @@ return {
 					["<esc>"] = "cancel", -- close preview or floating neo-tree window
 					["P"] = { "toggle_preview", config = { use_float = true } },
 					["l"] = "open",
+					["<leader>o"] = "open_with_system",
 					["S"] = "open_split",
 					["s"] = "open_vsplit",
 					-- ["S"] = "split_with_window_picker",
