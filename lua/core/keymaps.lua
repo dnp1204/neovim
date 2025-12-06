@@ -82,3 +82,28 @@ end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Open file or directory with OS default viewer
+vim.keymap.set('n', '<leader>o', function()
+  local file = vim.fn.expand('%:p')
+  if file == '' or file == vim.fn.getcwd() then
+    print('No file to open')
+    return
+  end
+  
+  local cmd
+  if vim.fn.has('mac') == 1 then
+    cmd = 'open'
+  elseif vim.fn.has('unix') == 1 then
+    cmd = 'xdg-open'
+  elseif vim.fn.has('win32') == 1 then
+    cmd = 'start'
+  end
+  
+  if cmd then
+    vim.fn.system(string.format('%s "%s"', cmd, file))
+    print('Opened: ' .. file)
+  else
+    print('OS not supported')
+  end
+end, { desc = 'Open file with OS default viewer' })
